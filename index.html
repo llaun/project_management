@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="mn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JobPortal.mn - Монголын ажлын портал</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Дээд цэс -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="nav-container">
+          <a href="#" class="logo">
+            <i class="fas fa-briefcase"></i>
+            <span>JobPortal</span>.mn
+          </a>
+
+          <div class="nav-menu" id="navMenu">
+            <ul class="nav-list">
+              <li>
+                <a href="#" class="nav-link active"
+                  ><i class="fas fa-home"></i> Нүүр</a
+                >
+              </li>
+              <li>
+                <a href="#jobs" class="nav-link"
+                  ><i class="fas fa-search"></i> Ажил хайх</a
+                >
+              </li>
+              <li>
+                <a href="#companies" class="nav-link"
+                  ><i class="fas fa-building"></i> Компани</a
+                >
+              </li>
+              <li>
+                <a href="#employers" class="nav-link"
+                  ><i class="fas fa-user-tie"></i> Ажил олгогчид</a
+                >
+              </li>
+              <li>
+                <a href="#blog" class="nav-link"
+                  ><i class="fas fa-newspaper"></i> Мэдээ</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="nav-actions">
+            <div class="user-auth">
+              <a href="#" class="btn btn-outline" id="loginBtn">Нэвтрэх</a>
+              <a href="#" class="btn btn-primary" id="registerBtn"
+                >Бүртгүүлэх</a
+              >
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Хайлтын хэсэг -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Таны мөрөөдлийн ажил <span class="highlight">эндээс</span> эхэлнэ
+          </h1>
+          <p class="hero-subtitle">
+            Монголын томоохон компаниудын 1500+ ажлын байрны сангийг нэг дороос
+            хайж олоорой
+          </p>
+
+          <div class="search-box">
+            <div class="search-form">
+              <div class="search-input-group">
+                <i class="fas fa-search"></i>
+                <input
+                  type="text"
+                  id="jobSearch"
+                  placeholder="Ажлын нэр, түлхүүр үг эсвэл компани"
+                />
+              </div>
+              <div class="search-input-group">
+                <i class="fas fa-map-marker-alt"></i>
+                <input type="text" id="locationSearch" placeholder="Байршил" />
+              </div>
+              <button class="btn btn-primary btn-search" id="searchBtn">
+                <i class="fas fa-search"></i> Хайх
+              </button>
+            </div>
+
+            <div class="quick-filters">
+              <span>Түгээмэл ажил:</span>
+              <a href="#" class="filter-tag">Программист</a>
+              <a href="#" class="filter-tag">Маркетинг</a>
+              <a href="#" class="filter-tag">Нярав</a>
+              <a href="#" class="filter-tag">Борлуулалт</a>
+              <a href="#" class="filter-tag">Багш</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Онцлох ажлын байрнууд -->
+    <section class="featured-jobs" id="jobs">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Онцлох ажлын байрнууд</h2>
+          <a href="#" class="view-all"
+            >Бүгдийг харах <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+
+        <div class="jobs-grid" id="jobsGrid">
+          <!-- Жоб картууд энд динамик орох болно -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Онцлох компаниуд -->
+    <section class="featured-companies" id="companies">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Онцлох компаниуд</h2>
+          <a href="#" class="view-all"
+            >Бүгдийг харах <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+
+        <div class="companies-grid">
+          <div class="company-card">
+            <div class="company-logo">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h3>TechVision LLC</h3>
+            <p>Технологийн компани</p>
+            <span class="job-count">24 ажлын байр</span>
+          </div>
+
+          <div class="company-card">
+            <div class="company-logo">
+              <i class="fas fa-university"></i>
+            </div>
+            <h3>Худалдааны банк</h3>
+            <p>Санхүүгийн байгууллага</p>
+            <span class="job-count">18 ажлын байр</span>
+          </div>
+
+          <div class="company-card">
+            <div class="company-logo">
+              <i class="fas fa-stethoscope"></i>
+            </div>
+            <h3>Эрүүл монгол</h3>
+            <p>Эрүүл мэндийн төв</p>
+            <span class="job-count">12 ажлын байр</span>
+          </div>
+
+          <div class="company-card">
+            <div class="company-logo">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3>Монгол их сургууль</h3>
+            <p>Боловсролын байгууллага</p>
+            <span class="job-count">8 ажлын байр</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ажил олгогчдын хэсэг -->
+    <section class="employer-section" id="employers">
+      <div class="container">
+        <div class="employer-content">
+          <div class="employer-info">
+            <h2>Ажил олгогч болох уу?</h2>
+            <p>
+              Манай платформ дээр өөрийн компанийг бүртгүүлээд чадварлаг
+              ажилтнуудыг олоорой
+            </p>
+            <ul class="employer-benefits">
+              <li>
+                <i class="fas fa-check-circle"></i> 100,000+ идэвхтэй ажил хайгч
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Хялбар ажлын зар нэмэх
+                систем
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Өргөдөл шалгах хэрэгсэл
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Компанийн профайл үүсгэх
+              </li>
+            </ul>
+            <a href="#" class="btn btn-primary btn-lg">Ажил нэмэх</a>
+          </div>
+          <div class="employer-image">
+            <i class="fas fa-user-tie"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Хөлний хэсэг -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <a href="#" class="footer-logo">
+              <i class="fas fa-briefcase"></i>
+              <span>JobPortal</span>.mn
+            </a>
+            <p>Монголын ажлын зах зээлийн тэргүүлэх онлайн платформ</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3>Ажил хайгчид</h3>
+            <ul>
+              <li><a href="#">Ажил хайх</a></li>
+              <li><a href="#">Компани үзэх</a></li>
+              <li><a href="#">CV үүсгэх</a></li>
+              <li><a href="#">Зөвлөгөө</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Ажил олгогчид</h3>
+            <ul>
+              <li><a href="#">Ажил нэмэх</a></li>
+              <li><a href="#">Ажил хайгч хайх</a></li>
+              <li><a href="#">Компани бүртгэх</a></li>
+              <li><a href="#">Үйлчилгээний нөхцөл</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Холбоо барих</h3>
+            <ul class="contact-info">
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Улаанбаатар хот, Сүхбаатар
+                дүүрэг
+              </li>
+              <li><i class="fas fa-phone"></i> 7700-1234</li>
+              <li><i class="fas fa-envelope"></i> info@jobportal.mn</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2024 JobPortal.mn. Бүх эрх хуулиар хамгаалагдсан.</p>
+          <div class="footer-links">
+            <a href="#">Нууцлалын бодлого</a>
+            <a href="#">Үйлчилгээний нөхцөл</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Нэвтрэх/Бүртгүүлэх modal -->
+    <div class="modal" id="authModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="modalTitle">Нэвтрэх</h3>
+          <button class="close-modal" id="closeModal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form id="authForm">
+            <div class="form-group">
+              <label for="email">Имэйл хаяг</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="name@example.com"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="password">Нууц үг</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Нууц үгээ оруулна уу"
+                required
+              />
+            </div>
+            <div class="form-options">
+              <label>
+                <input type="checkbox" id="rememberMe" /> Намайг сана
+              </label>
+              <a href="#" class="forgot-password">Нууц үгээ мартсан уу?</a>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary btn-block"
+              id="submitAuth"
+            >
+              Нэвтрэх
+            </button>
+          </form>
+          <div class="auth-switch">
+            <p id="switchText">
+              Шинэ хэрэглэгч үү? <a href="#" id="switchAuth">Бүртгүүлэх</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
